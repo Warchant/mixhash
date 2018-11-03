@@ -1,21 +1,21 @@
-import hashlib, qubit_hash, keccak_hash, lyra2re_hash, x11_hash
+# import hashlib
+import qubit_hash
+# import keccak_hash
+# import lyra2re_hash
+# import x11_hash
 # import lyra2re2_hash
 # import lyra2re_hash
 # import qubit_hash
 
-# def SHA256Hash(x):
-#     """Equivalent to hashlib.sha256(x).digest()."""
-#     return hashlib.sha256(x).digest()
-
-def SHA256(x):
-    """Two rounds of SHA256."""
-    return hashlib.sha256(hashlib.sha256(x).digest()).digest()
-
-def Lyra2re(x):
-    return lyra2re_hash.getPoWHash(x)
-
-def Keccak(x):
-    return keccak_hash.getPoWHash(x, len(x))
+# def SHA256(x):
+#     """Two rounds of SHA256."""
+#     return hashlib.sha256(hashlib.sha256(x).digest()).digest()
+#
+# def Lyra2re(x):
+#     return lyra2re_hash.getPoWHash(x)
+#
+# def Keccak(x):
+#     return keccak_hash.getPoWHash(x, len(x))
 
 def Qubit(x):
     return qubit_hash.getPoWHash(x)
@@ -32,8 +32,8 @@ def Qubit(x):
 # def GroestlHash(x):
 #     return groestlcoin_hash.getHash(x, len(x))
 
-def X11(x):
-    return x11_hash.getPoWHash(x)
+# def X11(x):
+#     return x11_hash.getPoWHash(x)
 
 # def ScryptHash(x):
 #     """Scrypt (Litecoin parameters) hash."""
