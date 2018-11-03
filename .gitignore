@@ -14,3 +14,6 @@ config.js
 note.txt
 gen.py
 test.py
+
+mixhash.egg-info
+py3

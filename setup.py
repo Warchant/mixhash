@@ -50,10 +50,10 @@ lyra2re_hash_module = Extension('lyra2re_hash',
 # 										  'mixhash/sha3/skein.c'],
 #                                include_dirs=['mixhash/lyra2','mixhash/sha3'])
 
-neoscrypt_module = Extension('neoscrypt',
-                        sources = ['mixhash/neoscrypt/module.c',
-                                    'mixhash/neoscrypt/neoscrypt.c'],
-                        include_dirs=['mixhash/neoscrypt'])
+# neoscrypt_module = Extension('neoscrypt',
+#                         sources = ['mixhash/neoscrypt/module.c',
+#                                     'mixhash/neoscrypt/neoscrypt.c'],
+#                         include_dirs=['mixhash/neoscrypt'])
 
 x11_hash_module = Extension('x11_hash',
                                sources = ['mixhash/x11/module.c',
@@ -83,5 +83,11 @@ setup (	name = 'mixhash',
 		keywords = ['cryptocurrency', 'coin','bitcoin', 'dash','litecoin', 'scrypt', 'neoscrypt', 'x11', 'qubit', 'skein', 'groestl'],
 		package_dir = {'mixhash': 'mixhash'},
 		py_modules = ['mixhash.__init__'],
-        ext_modules = [ lyra2re_hash_module, qubit_hash_module, keccak_hash_module, neoscrypt_module, x11_hash_module])
+        ext_modules = [
+			lyra2re_hash_module,
+			qubit_hash_module,
+			keccak_hash_module,
+			# neoscrypt_module,
+			x11_hash_module
+		])
 
