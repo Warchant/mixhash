@@ -7,7 +7,7 @@ keccak_hash_module = Extension('keccak_hash',
 										  'mixhash/sha3/keccak.c'
 
 										  ],
-#                                include_dirs=['mixhash/keccak','mixhash/sha3'])
+                               include_dirs=['mixhash/keccak','mixhash/sha3'])
 #
 # qubit_hash_module = Extension('qubit_hash',
 #                                sources = ['mixhash/qubit/module.c',
